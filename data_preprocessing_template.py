@@ -5,13 +5,17 @@ import pandas as pd
 from sklearn.preprocessing import Imputer
 # encoding categorical data
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+# split dataset into training set and test set
+from sklearn.model_selection import train_test_split
 
 
 
 # import the dataset
 dataset = pd.read_csv("Data.csv")
 
+# undependent variables
 x = dataset.iloc[:, :-1].values
+# dependent variables
 y = dataset.iloc[:, 3].values
 
 
@@ -34,6 +38,9 @@ x = one_hot_encoder.fit_transform(x).toarray()
 label_encoder_y = LabelEncoder()
 y = label_encoder_y.fit_transform(y)
 
+
+# Splitting dataset into the training set and test set 
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = .2, random_state = 0)
 
 
 
