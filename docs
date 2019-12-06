@@ -1,0 +1,13 @@
+
+Simple linear regression
+**********
+y = b0 + b1*x1
+
+y => dependent variable
+x => independent variable
+b1 => coefficient (unit changes of x1)
+
+
+
+
+
