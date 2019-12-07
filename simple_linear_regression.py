@@ -22,7 +22,16 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 1/3, rando
 
 # Fitting simple linear Regression to the training set
 regressor = LinearRegression()
+# learning
 regressor.fit(x_train, y_train)
+
+# predicting the test set results
+y_pred = regressor.predict(x_test)
+# compare prediction with real
+# real one
+print(y_test)
+# predicted one
+print(y_pred)
 
 
 
