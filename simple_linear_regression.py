@@ -29,10 +29,30 @@ regressor.fit(x_train, y_train)
 y_pred = regressor.predict(x_test)
 # compare prediction with real
 # real one
-print(y_test)
+# print(y_test)
 # predicted one
-print(y_pred)
+# print(y_pred)
 
 
+# Visualising the Training set results
+plt.scatter(x_train, y_train, s=15, color="red")
+y_pred = regressor.predict(x_train)
+plt.plot(x_train, y_pred, color="blue")
+# graph stuff
+plt.title("Salary vs Experience (Training set)")
+plt.xlabel("Years pf experience")
+plt.ylabel("Salary")
+plt.show()
+
+
+# Visualising the Test set results
+plt.scatter(x_test, y_test, s=15, color="red")
+y_pred = regressor.predict(x_train)
+plt.plot(x_train, y_pred, color="blue")
+# graph stuff
+plt.title("Salary vs Experience (Test set)")
+plt.xlabel("Years pf experience")
+plt.ylabel("Salary")
+plt.show()
 
 
