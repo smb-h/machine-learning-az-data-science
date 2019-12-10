@@ -1,4 +1,14 @@
 
+Assumption of a linear regression:
+1. Linearity
+2. Homoscedasticity
+3. Multivariate normality
+4. Independence of errors
+5. Lack of multicollinearity
+
+#######
+
+
 Simple linear regression
 **********
 y = b0 + b1*x1
@@ -6,7 +16,17 @@ y = b0 + b1*x1
 y => dependent variable
 x => independent variable
 b1 => coefficient (unit changes of x1)
+b0 => constant
 
+
+Multiple linear regression
+**********
+y = b0 + b1*x1 + b2*x2 + ... + bn*xn
+
+y => dependent variable
+x1, x2, ..., xn => independent variable
+b1, b2, ..., bn => coefficient (unit changes of xn)
+b0 => constant
 
 
 
