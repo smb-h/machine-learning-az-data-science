@@ -60,6 +60,20 @@ x = np.append(np.ones((50, 1)).astype(int), x, axis=1)
 x_opt = x[:, [0, 1, 3, 4, 5]]
 regressor_ols = sm.OLS(endog=y, exog=x_opt).fit()
 regressor_ols.summary()
-
+# removed 1 cuz it has highest p value that is greater then significant level
+x = np.append(np.ones((50, 1)).astype(int), x, axis=1)
+x_opt = x[:, [0, 3, 4, 5]]
+regressor_ols = sm.OLS(endog=y, exog=x_opt).fit()
+regressor_ols.summary()
+# removed 4 cuz it has highest p value that is greater then significant level
+x = np.append(np.ones((50, 1)).astype(int), x, axis=1)
+x_opt = x[:, [0, 3, 5]]
+regressor_ols = sm.OLS(endog=y, exog=x_opt).fit()
+regressor_ols.summary()
+# removed 5 cuz it has highest p value that is greater then significant level
+x = np.append(np.ones((50, 1)).astype(int), x, axis=1)
+x_opt = x[:, [0, 3]]
+regressor_ols = sm.OLS(endog=y, exog=x_opt).fit()
+regressor_ols.summary()
 
 
